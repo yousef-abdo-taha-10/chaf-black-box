@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaShoppingCart } from "react-icons/fa";
 import "../Navbar/NavBarr.css";
-import { Container , Navbar,Nav,Badge,NavbarBrand,NavDropdown } from 'react-bootstrap'
+import { Container ,Nav,Badge,NavDropdown , Navbar } from 'react-bootstrap'
 const NavBar = () => {
   return (
     <div>
