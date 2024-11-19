@@ -7,6 +7,7 @@
     justify-content: space-around;
     margin-top: -15px;
     box-shadow: 0px 1px 6px rgb(179, 174, 174);
+    /* overflow: hidden; */
 }
 
 .LOGO img{
@@ -211,6 +212,36 @@ padding-bottom: 20px;
 
 }
   }
+
+ @media (max-width: 768px) {
+  .Navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-brand {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .butonn-Nav-Filters {
+    display: block; /* Show filter button */
+  }
+
+  .links-nav {
+    display: none; /* Collapse links by default */
+  }
+
+  .Navbar.Collapse.show .links-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+}
   
 
 
