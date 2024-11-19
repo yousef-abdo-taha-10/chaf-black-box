@@ -1,31 +1,33 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
+
 import axios from 'axios';
 import './Login.css';
+import {  Link } from 'react-router-dom';
 
 
 
 
 const Login = () => {
 
-  const [name, setName] = useState(' ')
-  const [password, setPassword] = useState(' ')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [error, setError] = useState({})
  
 
   const Validate = () => {
-    let tempErrors = {}
-    if (!name) {
-      tempErrors.name = '*Name is required* '
+    let tempErrors = {};
+    if (!email) {
+      tempErrors.email = '**email is required** ';
+      
     }
-    else if (name.length <3) {
-      tempErrors.name = "*Name must be at least 4 characters*";
+    else if (!/\S+@\S+\.\S+/.test(email)) {
+      tempErrors.email = "*Email is invalid*";
     }
     if (!password) {
-      tempErrors.password = 'Password is required ';
+      tempErrors.password = '**Password is required** ';
     }
     else if (password.length < 6) {
-      tempErrors.password = "Password must be at least 6 characters";
+      tempErrors.password = "*Password must be at least 6 characters*";
     }
     setError(tempErrors)
     return Object.keys(tempErrors).length === 0 
@@ -37,7 +39,7 @@ const Login = () => {
     e.preventDefault()
     if (Validate()) {
       try{
-        const response = await axios.post('/api/auth/login',{name : name , password : password});
+        const response = await axios.post('/api/auth/login',{email : email , password : password});
         if (response.data.success){
           console.log("login successful")
         }else{
@@ -46,8 +48,8 @@ const Login = () => {
       }catch(error){
         setError({apiError:'try again'});
       }
-      console.log(name, password)
-      setName('');
+      console.log(email, password)
+      setEmail('');
       setPassword('');
       
     }
@@ -60,14 +62,15 @@ const Login = () => {
         <br/>and eating it.</p>
         <form onSubmit={handleSubmit}>
          
-          {/* <input type="text" name="name"  value={name}  placeholder='username' className="username" onChange={(e) => setName(e.target.value)} /> */}
-          <input type='text'  placeholder='Username' className="username" onChange={(e) => setName(e.target.value)}/>
-          {error.name && <p style={{ color: 'red' ,border:'1px solid red',width:'350px',height:'40px',marginLeft:'75px' }}>{error.name}</p>}
+         
+          <input type='email' name='email'  placeholder='Your Email' value={email} className="em" onChange={(e) => setEmail(e.target.value)}/>
+          {error.email && <p style={{ color: 'red' ,border:'1px solid red',width:'350px',height:'40px',marginLeft:'45px' }}>{error.email}</p>}
           <br />
          
-          <br />
-          <input type='password' placeholder='Your Password'  className="password" onChange={(e) => setPassword(e.target.value)}  />
-          {error.password && <p style={{ color: 'red',border:'1px solid red',width:'350px',height:'40px',marginLeft:'75px' }}>{error.password}</p>}
+      
+          <input type='password' placeholder='Your password' value={password} onChange={(e) => setPassword(e.target.value)} className="password" name='password' />
+          {error.password && <p style={{ color: 'red',border:'1px solid red',width:'350px',height:'40px',marginLeft:'45px' }}>{error.password}</p>}
+
           <br />
         
            <input type='checkbox' className='box' id='boxx' />
@@ -85,9 +88,17 @@ const Login = () => {
           
           <button type="submit" className='bbb'>Sign in</button>
           <br/>
-          <button type="submit" className='btn'>Sign in with Google</button>
-          <p className='last-par'>Don't have an account <span className='sign'>Sign up</span> </p>
-          {/* <a href ="/Register" className='linkk'>ليس لديك حساب؟ <span>انشئ الان</span></a> */}
+          <button type="submit" className='button-btn'>
+           <div className='google'>
+           <img src="image\icons8-google.svg" alt='google'/>
+           </div>
+            Sign in with Google</button>
+         
+          <Link to="/register" className="link-login">
+                    <p className="last-par">
+                        Don't have an account? <span className="sign">Sign up</span>
+                    </p>
+                </Link>
 
        </form>  
 
