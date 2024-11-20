@@ -5,12 +5,14 @@ import NavBar from './components/Navbar/NavBar';
 import Home from './Home';
 import Aboute from './Aboute';
 import Contact from './Contact';
+import Login from './login';
+
 function App() {
   return (
     <div className="App">
-      
-     
+      <h1>hhh</h1>
      <BrowserRouter>
+     
      <NavBar/>
      <Routes>
       <Route path='/Home' element={<Home/>}/>
@@ -18,7 +20,7 @@ function App() {
       <Route path='/Contact' element={<Contact/>}/>
      </Routes>
      </BrowserRouter>
-     <h1>hello1</h1>
+     <Login />
     </div>
   );
 }
