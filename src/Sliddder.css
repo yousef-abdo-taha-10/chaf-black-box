@@ -1,0 +1,33 @@
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    /* background-color: #fff; */
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent; 
+   border-bottom: 10px solid transparent; 
+    /* opacity: .5; */
+    transition:  .6s ease;
+    border-radius: 50%;
+    background-color:#FBA919 ;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block; 
+     width: 2rem;
+    height: 2rem;
+    background-repeat:no-repeat ;
+    background-position: 100%;
+    background-size: 100% 100%;
+}
+.carousal-img img{
+    width: 100%;
+}
+

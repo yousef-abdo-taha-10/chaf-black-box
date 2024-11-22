@@ -1,0 +1,126 @@
+body{
+    background-color:#FFFCF7;
+}
+.reg{
+    text-align: center;
+}
+.hh2{
+    font-size: 40px;
+    font-weight:bold;
+   
+
+}
+form{
+   
+   border-radius: 7px;
+    background-color: #ffffff;
+    height: auto;
+    width: 600px;
+    padding: 5px;
+
+   box-shadow:5px 2px 2px   rgb(255, 255, 255);
+     
+
+
+}
+.usernames ,.emails,.passwords{
+    margin-bottom: 17px;
+    width: 499px;
+    background-color: rgb(255, 255, 255);
+    height: 74px;
+    border-radius: 7px;
+    border: 1px solid #c2bebe;
+   
+   box-shadow: 4px 5px #f5f4f4;
+    
+ 
+    
+ }
+ .register-box{
+    margin-top: 20px;
+ 
+   
+ }
+.register-remember{
+    color: #FBA919;
+}
+.register-remember1{
+   margin-right: 220px;
+   font-size: 15px;
+   
+   
+
+}
+.register-btn{
+    width: 499px;
+    background-color: #FBA919;
+   border-radius: 7px;
+   height: 74px;
+    color: #fff;
+ margin-top: 15px;
+    border: none;
+    font-size: 14px;
+    font-weight:bold;
+   box-shadow:5px 2px 2px   rgb(255, 255, 255);
+ 
+}
+.register-btn2{
+    width: 499px;
+    height: 74px;
+ font-weight: bold;
+   border-radius: 5px;
+   margin-top: 25px;
+   font-size: 14px;
+ border: 1px solid black;
+ background-color: #ffffff;
+ box-shadow:5px 2px 2px   rgb(255, 255, 255);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-left: 50px;
+
+}
+.google2 img{
+    width: 23px;
+   padding: 7px;
+  }
+button{
+    
+    cursor: pointer;
+    border-radius: 7px;
+    margin-top: 7px;
+}
+.register-sign{
+    font-size: 14px;
+    color: #FBA919;
+}
+.register-par{
+    font-size: 15px;
+    color: black;
+    
+
+}
+.register-par2{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(151, 149, 149);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
