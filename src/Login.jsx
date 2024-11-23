@@ -39,7 +39,7 @@ const Login = () => {
     e.preventDefault()
     if (Validate()) {
       try{
-        const response = await axios.post('/api/auth/login',{email : email , password : password});
+        const response = await axios.post('/api/users/login',{email : email , password : password});
         if (response.data.success){
           console.log("login successful")
         }else{
