@@ -7,6 +7,7 @@ import Aboute from './Aboute';
 import Contact from './Contact';
 import Login from './Login';
 import Register from './Register';
+import About from './About';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
      </Routes>
      <Login />
       <Register />
-    
+    <About />
      {/* <Rating />
      <Question />  */}
      
