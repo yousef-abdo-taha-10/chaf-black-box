@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-
-import axios from 'axios';
 import './Login.css';
 import {  Link } from 'react-router-dom';
+import axios from './axiosConfig';
 
 
 
@@ -42,11 +41,17 @@ const Login = () => {
         const response = await axios.post('/api/users/login',{email : email , password : password});
         if (response.data.success){
           console.log("login successful")
+          const token = response.data.token;
+          localStorage.setItem('authToken',token)
+          axios.defaults.headers.common['Authorization']=`Bearer ${token}`;
+          alert('login successful')
         }else{
-          setError({apiError : "login failed}"});
+         
+          setError({ apiError: response.data.message || "Login failed" })
         }
       }catch(error){
         setError({apiError:'try again'});
+  ;
       }
       console.log(email, password)
       setEmail('');
@@ -64,12 +69,12 @@ const Login = () => {
          
          
           <input type='email' name='email'  placeholder='Your Email' value={email} className="em" onChange={(e) => setEmail(e.target.value)}/>
-          {error.email && <p style={{ color: 'red' ,border:'1px solid red',width:'350px',height:'40px',marginLeft:'45px' }}>{error.email}</p>}
+          {error.email && <p style={{ color: 'red' ,border:'1px solid red',width:'350px',height:'40px',marginLeft:'20%' , backgroundColor :'pink', marginTop:'5px'}}>{error.email}</p>}
           <br />
          
       
           <input type='password' placeholder='Your password' value={password} onChange={(e) => setPassword(e.target.value)} className="password" name='password' />
-          {error.password && <p style={{ color: 'red',border:'1px solid red',width:'350px',height:'40px',marginLeft:'45px' }}>{error.password}</p>}
+          {error.password && <p style={{ color: 'red',border:'1px solid red',width:'350px',height:'40px',marginLeft:'20%' , backgroundColor:'pink', marginTop:'5px' }}>{error.password}</p>}
 
           <br />
         
@@ -78,7 +83,7 @@ const Login = () => {
            
            <br />
          
-           {error.apiError && <p style={{color:'red'}}>{error.apiError}</p>}
+           {error.apiError && <p style={{color:'white',backgroundColor:'green', width:'170px', height:'30px',marginLeft:'35%'}}>{error.apiError}</p>}
       
       
 
@@ -94,7 +99,7 @@ const Login = () => {
            </div>
             Sign in with Google</button>
          
-          <Link to="/register" className="link-login">
+          <Link to="./register" className="link-login">
                     <p className="last-par">
                         Don't have an account? <span className="sign">Sign up</span>
                     </p>
