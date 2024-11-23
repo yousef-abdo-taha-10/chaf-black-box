@@ -90,7 +90,7 @@ const Login = () => {
           <br/>
           <button type="submit" className='button-btn'>
            <div className='google'>
-           <img src="image\icons8-google.svg" alt='google'/>
+           <img src="Images\icons8-google.svg" alt='google'/>
            </div>
             Sign in with Google</button>
          

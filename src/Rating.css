@@ -1,0 +1,54 @@
+.rating{
+    background-color: rgb(243, 235, 236);
+    height:400px;
+}
+
+.rating .hhh{
+    font-size: 40px;
+    text-align: center;
+    padding: 25px;
+   
+
+   
+}
+
+
+.rating .rating-row img{
+    width: 28px;
+    margin-top: 5px;
+}
+.rating .rating-row p{
+    width: 470px;
+    margin: 9px;
+    font-size: 30px;
+    
+}
+.rating-row{
+   padding: 7px;
+  
+}
+.rating-row  .rating-div1 img{
+    width: 44px;
+  
+
+}
+.rating-div1{
+    display: flex;
+   
+    align-items: center;
+    margin-left: 6px;
+}
+.rating-div2{
+    margin-left: 6px;
+
+}
+.rating-div2 h5{
+    font-size:18px;
+    color: black ;
+}
+.rating-div2 h6{
+    font-size:15px;
+    color: #696767;
+ 
+}
+
