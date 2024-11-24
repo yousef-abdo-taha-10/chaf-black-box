@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-
-import axios from 'axios';
 import './Login.css';
 import {  Link } from 'react-router-dom';
+import axios from './axiosConfig';
 
 
 
@@ -42,11 +41,17 @@ const Login = () => {
         const response = await axios.post('/api/users/login',{email : email , password : password});
         if (response.data.success){
           console.log("login successful")
+          const token = response.data.token;
+          localStorage.setItem('authToken',token)
+          axios.defaults.headers.common['Authorization']=`Bearer ${token}`;
+          alert('login successful')
         }else{
-          setError({apiError : "login failed}"});
+         
+          setError({ apiError: response.data.message || "Login failed" })
         }
       }catch(error){
         setError({apiError:'try again'});
+  ;
       }
       console.log(email, password)
       setEmail('');
@@ -90,11 +95,11 @@ const Login = () => {
           <br/>
           <button type="submit" className='button-btn'>
            <div className='google'>
-           <img src="Images\icons8-google.svg" alt='google'/>
+           <img src="icons\icons8-google.svg" alt='google'/>
            </div>
             Sign in with Google</button>
          
-          <Link to="/register" className="link-login">
+          <Link to="./register" className="link-login">
                     <p className="last-par">
                         Don't have an account? <span className="sign">Sign up</span>
                     </p>
