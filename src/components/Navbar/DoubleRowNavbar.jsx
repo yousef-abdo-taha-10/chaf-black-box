@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container, NavDropdown, Form, FormControl, Button, NavbarBrand, Row, Col,Badge } from 'react-bootstrap';
+import { Navbar, Nav, Container,  Form, Button, NavbarBrand, Row, Col,Badge } from 'react-bootstrap';
 import { FaShoppingCart } from "react-icons/fa";
 
 function DoubleRowNavbar() {
@@ -10,7 +10,7 @@ function DoubleRowNavbar() {
         <Col >
         
      <NavbarBrand href='Home'>
-       <img sec="/Images/Chef_logo_design_vector_illustration__Restaurant_logo-removebg-preview 1.png"></img>
+       <img sec="/Images/Chef_logo_design_vector_illustration__Restaurant_logo-removebg-preview 1.png" alt=''/>
      <h3>Chef</h3>
      </NavbarBrand>
         </Col>

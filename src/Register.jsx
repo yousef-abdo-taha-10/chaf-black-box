@@ -6,6 +6,7 @@ const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [phone, setPhone] = useState('');
     const [error, setError] = useState({});
     const [successMessage, setSuccessMessage] = useState('');
 
@@ -26,6 +27,12 @@ const Register = () => {
         else if (password.length < 6) {
             tempErrors.password = "Password must be at least 6 characters";
         }
+        if (!phone) {
+            tempErrors.phone = 'phone is required ';
+        }
+        else if (phone.length < 11) {
+            tempErrors.phone = "phone must be at least 11 numbers";
+        }
 
         setError(tempErrors);
         return Object.keys(tempErrors).length === 0;
@@ -36,12 +43,17 @@ const Register = () => {
         e.preventDefault();
         if (Validate()) {
         try {
-         const response = await axios.post('',{
+         const response = await axios.post('/api/users/register',{
             name,
             email,
-            password
+            password,
+            phone
+           
          });
-         console.log(response.data);
+         const token = response.data.token;
+         localStorage.setItem('token', token);
+        
+        
          setSuccessMessage('Account created successfully!');
         
         }catch(error){
@@ -49,7 +61,11 @@ const Register = () => {
             setError({server: 'Failed to create account. Please try again later.'})
 
         }
-            console.log(name, email, password);
+            console.log(name, email, password,phone);
+            setName('');
+            setEmail('');
+            setPassword('');
+            setPhone('');
         }
 
     }
@@ -66,19 +82,22 @@ const Register = () => {
                     
                     <br />
                     <input type='text' placeholder='Username' value={name} onChange={(e) => setName(e.target.value)} className='usernames' />
-                    {error.name && <p style={{ color: 'red' }}>{error.name}</p>}
+                    {error.name && <p style={{ color: 'red', backgroundColor:'pink',width:'300px',height:'30px',marginLeft:'25%' }}>{error.name}</p>}
                     <br />
 
                    
                     
                     <input type='email' placeholder='Email  Address' value={email} onChange={(e) => setEmail(e.target.value)} className='emails' />
-                    {error.email && <p style={{ color: 'red' }}>{error.email}</p>}
+                    {error.email && <p style={{ color: 'red', backgroundColor:'pink',width:'300px',height:'30px',marginLeft:'25%' }}>{error.email}</p>}
                     <br />
 
                     
                    
                     <input type='password' placeholder='Create Password' value={password} onChange={(e) => setPassword(e.target.value)} className="passwords" />
-                    {error.password && <p style={{ color: 'red' }}>{error.password}</p>}
+                    {error.password && <p style={{ color: 'red', backgroundColor:'pink',width:'300px',height:'30px' ,marginLeft:'25%'}}>{error.password}</p>}
+                    <br />
+                    <input type='tel' placeholder=' phone' value={phone} onChange={(e) => setPhone(e.target.value)} className="phones" />
+                    {error.phone && <p style={{ color: 'red', backgroundColor:'pink',width:'300px',height:'30px' ,marginLeft:'25%'}}>{error.phone}</p>}
                     <br />
                     <input type='checkbox' className='register-box' id='register-boxx' />
                     <label className='register-remember1' for="register-boxx">I agree with <span className='register-remember'>Terms&Condition</span> of Chef</label>
@@ -87,7 +106,8 @@ const Register = () => {
           <br/>
           <button type="submit" className='register-btn2'>
           <div className='google2'>
-           <img src="Images\icons8-google.svg" alt='google2'/>
+          <img src="Images\icons8-google.svg" alt='google2'/>
+
            </div>
             Sign in with Google</button>
           <p className='register-par2'>Already have an account? <span className='register-sign'>Sign in</span> </p>
