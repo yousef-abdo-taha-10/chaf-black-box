@@ -69,12 +69,12 @@ const Login = () => {
          
          
           <input type='email' name='email'  placeholder='Your Email' value={email} className="em" onChange={(e) => setEmail(e.target.value)}/>
-          {error.email && <p style={{ color: 'red' ,border:'1px solid red',width:'350px',height:'40px',marginLeft:'20%' , backgroundColor :'pink', marginTop:'5px'}}>{error.email}</p>}
+          {error.email && <p style={{ color: 'red' ,border:'1px solid red',width:'350px',height:'40px',marginLeft:'45px' }}>{error.email}</p>}
           <br />
          
       
           <input type='password' placeholder='Your password' value={password} onChange={(e) => setPassword(e.target.value)} className="password" name='password' />
-          {error.password && <p style={{ color: 'red',border:'1px solid red',width:'350px',height:'40px',marginLeft:'20%' , backgroundColor:'pink', marginTop:'5px' }}>{error.password}</p>}
+          {error.password && <p style={{ color: 'red',border:'1px solid red',width:'350px',height:'40px',marginLeft:'45px' }}>{error.password}</p>}
 
           <br />
         
@@ -83,7 +83,7 @@ const Login = () => {
            
            <br />
          
-           {error.apiError && <p style={{color:'white',backgroundColor:'green', width:'170px', height:'30px',marginLeft:'35%'}}>{error.apiError}</p>}
+           {error.apiError && <p style={{color:'red'}}>{error.apiError}</p>}
       
       
 
@@ -95,7 +95,7 @@ const Login = () => {
           <br/>
           <button type="submit" className='button-btn'>
            <div className='google'>
-           <img src="Images\icons8-google.svg" alt='google'/>
+           <img src="icons\icons8-google.svg" alt='google'/>
            </div>
             Sign in with Google</button>
          
