@@ -15,11 +15,11 @@ const Rating = () => {
                         <Row className='rating-row'>
                             <Col lg={4} md={4} sm={4}>
 
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt=''/>
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt=''/>
                                
                                 <p>Delicious food, quick delivery, and
                                     excellent service. I order from here
@@ -27,7 +27,7 @@ const Rating = () => {
                                   
                                 <div className="rating-div1">
                                     <div>
-                                        <img src="image\a_user01_avatar.png" alt='' />
+                                        <img src="images\a_user01_avatar.png" alt='' />
 
                                     </div>
 
@@ -44,11 +44,11 @@ const Rating = () => {
                             </Col>
                             <Col lg={4} md={4} sm={4}>
 
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
                                 <p>
                                     The taste of the dishes is amazing,
                                     and the portion sizes are generous.
@@ -57,7 +57,7 @@ const Rating = () => {
                             
                                 <div className="rating-div1">
                                     <div>
-                                        <img src="image\a_user02_avatar.png" alt='' />
+                                        <img src="images\a_user02_avatar.png" alt='' />
 
                                     </div>
 
@@ -72,17 +72,17 @@ const Rating = () => {
                                 </div>
                             </Col>
                             <Col lg={4} md={4} sm={4}>
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
-                                <img src='icons\Star.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
+                                <img src='icons\Star1.svg' alt='' />
                                 <p>Fresh ingredients,great flavors, and a diverse menu.i'm impressed with every order!
                                 </p>
 
                                 <div className="rating-div1">
                                     <div>
-                                        <img src="image\a_user03_avatar.png" alt='' />
+                                        <img src="images\a_user03_avatar.png" alt='' />
 
                                     </div>
 

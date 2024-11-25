@@ -23,7 +23,7 @@ const About = () => {
                                 <Col sm={12} md={6}>
                                     <div className=''>
                                         <span>
-                                            <img src='icons\Online Shopping.svg' alt='Online order'  />
+                                            <img src='icons\Online-Shopping.svg' alt='Online order'  />
                                         </span>
                                         <h5>Online order</h5>
                                     </div>
@@ -32,7 +32,7 @@ const About = () => {
                                 <Col sm={12} md={6}>
                                     <div className=''>
                                         <span>
-                                            <img src='icons\Chef Hat.svg' alt='Super chefs'  />
+                                            <img src='icons\Chef-Hat.svg' alt='Super chefs'  />
                                         </span>
                                         <h5>Super chefs</h5>
                                     </div>
@@ -40,7 +40,7 @@ const About = () => {
                                 <Col sm={12} md={6} >
                                     <div className=''>
                                         <span>
-                                            <img src='icons/Time Machine.svg' alt='24h service'  />
+                                            <img src='icons\Time-Machine.svg' alt='24h service'  />
                                         </span>
                                         <h5>24h service</h5>
                                     </div>
@@ -58,7 +58,7 @@ const About = () => {
 
 
                         <Col className='about-right' lg={6} md={12} sm={12}>
-                            <img src='Images\Group 110.png' alt='chef'  className='last-img'/>
+                            <img src='Images\Group110.png' alt='chef'  className='last-img'/>
                         </Col>
                     </Row>
                 </Container>
