@@ -9,6 +9,7 @@ import Login from './Login';
 import Register from './Register';
 import About from './About';
 import DoubleRowNavbar from './components/Navbar/DoubleRowNavbar'
+import Rating from './Rating'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
      </Routes>
      <Login />
       <Register />
+      <Rating />
     <About />
      {/* <Rating />
      <Question />  */}

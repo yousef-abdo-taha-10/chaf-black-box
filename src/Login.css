@@ -47,7 +47,7 @@ input::placeholder{
    font-size: 15px;
  }
  .remember{
-    margin-left: 260px;
+    margin-left: 270px;
 }
 
 .box{
@@ -62,7 +62,7 @@ input::placeholder{
     color: #fff;
     padding: 9px;
     border: none;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
    box-shadow:5px 2px 2px   rgb(255, 255, 255);
 
@@ -74,6 +74,7 @@ input::placeholder{
 }
 .link-login{
   text-decoration: none;
+  font-size: 20px;
 }
 .last-par{
    
@@ -87,7 +88,7 @@ input::placeholder{
 .button-btn{
     width: 499px;
     height: 74px;
-    font-size: 14px;
+    font-size: 15px;
    border-radius: 5px;
    margin-top: 20px;
   font-weight: bold;
