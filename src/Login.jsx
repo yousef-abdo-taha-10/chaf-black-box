@@ -79,7 +79,7 @@ const Login = () => {
           <br />
         
            <input type='checkbox' className='box' id='boxx' />
-           <label className='remember1' for="boxx">Remember me <span className='remember'>Forget password?</span></label> 
+           <label className='remember1' for="boxx">   Remember me <span className='remember'>Forget password?</span></label> 
            
            <br />
          

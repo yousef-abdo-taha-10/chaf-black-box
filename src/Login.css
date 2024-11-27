@@ -45,9 +45,10 @@ input::placeholder{
 
  .remember1  ,.remember{
    font-size: 15px;
+   margin-left: 5px;
  }
  .remember{
-    margin-left: 270px;
+    margin-left: 260px;
 }
 
 .box{
@@ -62,7 +63,7 @@ input::placeholder{
     color: #fff;
     padding: 9px;
     border: none;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
    box-shadow:5px 2px 2px   rgb(255, 255, 255);
 
@@ -88,7 +89,7 @@ input::placeholder{
 .button-btn{
     width: 499px;
     height: 74px;
-    font-size: 15px;
+    font-size: 16px;
    border-radius: 5px;
    margin-top: 20px;
   font-weight: bold;
@@ -106,7 +107,7 @@ input::placeholder{
 
 
 .google img{
-  width: 30px;
+  width: 35px;
  padding: 7px;
 }
 

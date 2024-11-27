@@ -54,8 +54,8 @@ const Footer = () => {
                 </Container>
 
                 <div className='footer-last'>
-                <h5 ><img src='image\Cheflogo.png' alt=''/>Chef - Your First Choice</h5>
-                <p>© 2023 Chef. All Rights Reserved.</p>
+                <h5 ><img src='Images\Chef_logo.png' alt=''/>Chef - Your First Choice</h5>
+                <p>© 2024 Chef. All Rights Reserved.</p>
                 </div>
 
               

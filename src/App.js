@@ -10,6 +10,7 @@ import Register from './Register';
 import About from './About';
 import DoubleRowNavbar from './components/Navbar/DoubleRowNavbar'
 import Rating from './Rating'
+import Footer from './Footer'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Register />
       <Rating />
     <About />
+    <Footer />
      {/* <Rating />
      <Question />  */}
      
