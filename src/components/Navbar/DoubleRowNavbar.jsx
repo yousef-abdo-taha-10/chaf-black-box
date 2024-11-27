@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import {
   Navbar,
@@ -12,10 +13,16 @@ import {
   Col,
   Badge,
 } from "react-bootstrap";
+=======
+import React from 'react';
+import { Navbar, Nav, Container,  Form, Button, NavbarBrand, Row, Col,Badge } from 'react-bootstrap';
+>>>>>>> 88f7e4cde36f2c1b739c7679fd517854335aae31
 import { FaShoppingCart } from "react-icons/fa";
+import './Nav.css';
 
 function DoubleRowNavbar() {
   return (
+<<<<<<< HEAD
     <Navbar expand="lg">
       <Container>
         <Row>
@@ -25,6 +32,18 @@ function DoubleRowNavbar() {
               <h3>Chef</h3>
             </NavbarBrand>
           </Col>
+=======
+   <Navbar expand="lg" className='DoubleRowNavbar'>
+    <Container>
+     <Row>
+        <Col >
+        
+     <NavbarBrand href='Home' className='nav-first'>
+       <img src="Images/Chef_logo.png" alt=''/>
+     <h3>Chef</h3>
+     </NavbarBrand>
+        </Col>
+>>>>>>> 88f7e4cde36f2c1b739c7679fd517854335aae31
 
           <Col sm="0" lg="2">
             <Button>filter</Button>
