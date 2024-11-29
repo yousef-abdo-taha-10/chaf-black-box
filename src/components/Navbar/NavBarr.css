@@ -1,248 +1,37 @@
-.Navbar{
-    width: 100%;
-    height: 140px;
-    background-color: #fffcf7;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: -15px;
-    box-shadow: 0px 1px 6px rgb(179, 174, 174);
-    /* overflow: hidden; */
-}
-
-.LOGO img{
-    width: 100px;
-}
-.brand{
- width:250px;
-margin-left: -10px;
- font-weight: 700;
-}
-.location-mark{
-margin-top: -17px;
-display: block;
-}
-
-.butonn-Nav-Filters button{
-    width: 107px;
-    height: 40px;
-color: #fffcf7;
-background-color: #FBA919;
-border: none;
-border-radius: 5px;
-margin-right: -40px;
-margin-left: 55px;
-margin-bottom: 15px;
-
-}
-.butonn-Nav-Filters button span{
-    padding-left: 7px;
-    
-}
-.serch-navbar-links .serch-nav input{
-    width: 520px;
-    height: 40px;
- position: relative;
- border: 2px #b0babf99 solid;
- border-radius: 5px;
- margin-left: 80px;
- margin-top: 27px;
- padding: 10px;
-}
-
-.serch-nav form svg{
-    position: absolute;
-    left: 855px;
-    top: 53px;
-
-}
-
-
-.links-nav{
-    display: flex;
-     margin-left: 220px;
-     margin-top: 15px;
+.navbar-contenier{
+    background-color:aqua;
    
 }
-.links-nav .Nav-link-center{
- margin-right: 20px;
-}
-.links-nav .Nav-link-center:hover{
-  color:#FBA919;
-}
-.links-end-nav{
- display: flex;
- align-items: center;
-
- margin-left:70px  ;
- padding-right: 60px;
- padding-top: 20px;
-
-}
-.links-end-nav .navlink-end{
-margin-left: 40px;
-padding-bottom: 20px;
-}
-.sign-in button{
-   width:78px;
-   height: 40px;
-   color: #FBA919;
-   border: 2px #FBA919 solid ;
-   border-radius: 5px; 
-   background-color:#ffffff;
-   margin-right:-10px;
-}
-.dropdown-toggle::after {
-  display:flex;
-  margin-left:20px;
-  vertical-align: .255em;
-  color: #FBA919;
-  margin-bottom: 10px;
-  /* border-top: .3em solid; */
-  /* border-right: .3em solid transparent; */
-  /* border-bottom: 0; */
-  border-left: .3em solid transparent;
-}
-
-  /* @media (min-width:578px)  {
-    .Navbar{
-      width: 100%;
-      height: 100px;
-    
-      margin-top: 0px;
-      
-  }
-  .LOGO img{
-    width: 65px;
-}
-.brand{
-  width:250px;
- margin-left: -5px;
-  font-weight: 400;
- }
- .location-mark{
-  margin-top: -10px;
-  display: block;
-  font-size: 15px;
-  } 
-  .links-nav{
-    display: flex;
-     margin-left: 150px;
-     margin-top: 15px;
-    display: none;
-  }
-  .serch-navbar-links .serch-nav input{
-    width:250px;
-    height: 35px;
-   margin-bottom: 20px;
- 
-}
-.links-end-nav{
-  display:flex;
-  align-items: center;
-  justify-content: center;
- font-size: 5px;
-  margin-left: -30px ;
-  padding-right: 1px;
-  padding-top: 20px;
- 
- }
- .ttt{
-  margin-bottom: 15px;
-  font-size: large;
- 
- } */
-
-  /* } */
+.strong{
+    position: relative;
+  width: 100%;
   
-  /* تخصيص للـ Navbar على الشاشات الصغيرة جداً (أقل من 576px) */
-  @media (max-width: 700px) {
-    
-    .ggg{
-      background-color: #ffc14e;
-      width: 100px;
-      border-radius: 10px;
-      padding: 15px;
-    }
-    .Navbar{
-      height: 70px;
-      margin-top:0px;
    
-  }
-  .LOGO img{
-    width: 50px;
-
 }
-.brand{
-  width:250px;
- margin-left:-5px;
-  font-weight: 400;
- }
- .location-mark{
- display:none;
-  }
-  .serch-navbar-links .serch-nav input{
-    width:250px;
-    height: 35px;
+.nav-form{
+  border: none;
+  border-radius: 5px;
+  position: absolute; 
+    
+   
+}
+.input{
+    border: none;
+  border-radius: 5px;
+  padding: 10px; 
+  width: 100%;
+}
+.icon{
+position: absolute;
+right: 4px;
+top: 3px;
+
  
 }
-.serch-nav form svg{
-  position: absolute;
-  left: 400px;
-  top: 113px;
-  margin: auto;
+.sign-in{      
+    background-color: #FBA919;
+    color: white;
+    border: none;
+    border-radius: 6px;
+   
 }
-.links-nav{
-  display: flex;
-   margin-left: 150px;
-   margin-top: 15px;
-  display: none;
-}
-.links-end-nav{
-  display: block;
-  align-items: center;
- 
-  margin-right: 20px ;
-  padding-right: 60px;
-  padding-top: 20px;
- 
- }
- .butonn-Nav-Filters button{
-  display: none;
-
-}
-  }
-
- @media (max-width: 768px) {
-  .Navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo-brand {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .butonn-Nav-Filters {
-    display: block; /* Show filter button */
-  }
-
-  .links-nav {
-    display: none; /* Collapse links by default */
-  }
-
-  .Navbar.Collapse.show .links-nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-}
-  
-
-
-

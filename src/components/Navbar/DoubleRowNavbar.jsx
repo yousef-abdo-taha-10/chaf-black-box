@@ -1,25 +1,26 @@
 import React from 'react';
 import { Navbar, Nav, Container, NavDropdown, Form, FormControl, Button, NavbarBrand, Row, Col,Badge } from 'react-bootstrap';
 import { FaShoppingCart } from "react-icons/fa";
+import "../Navbar/NavBarr.css";
 
 function DoubleRowNavbar() {
   return (
    <Navbar expand="lg">
-    <Container>
-     <Row>
+    <Container fluid className='coooonteiner'>
+     <Row className='topp'>
         <Col >
         
      <NavbarBrand href='Home'>
-       <img sec="/Images/Chef_logo_design_vector_illustration__Restaurant_logo-removebg-preview 1.png"></img>
+       <img src="/Images/Chef_logo_design_vector_illustration__Restaurant_logo-removebg-preview 1.png"></img>
      <h3>Chef</h3>
      </NavbarBrand>
         </Col>
 
-        <Col sm="0" lg="2">
+        <Col >
         <Button >filter</Button>
         </Col>
-        <Col sm="3" lg="4" xxl="5">
-        <Form className="d-flex">
+        <Col sm="3"  >
+        <Form className="">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -33,7 +34,7 @@ function DoubleRowNavbar() {
 
         </Form>
         </Col>
-        <Col sm="0" lg="3"  xxl="4">
+        <Col className='d-none d-md-block'>
 
         <Nav.Link className='navlink-end' href="#Orders"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 19C13.0001 19.1703 13.0437 19.3379 13.1267 19.4867C13.2098 19.6355 13.3294 19.7606 13.4744 19.8501C13.6194 19.9397 13.7848 19.9907 13.955 19.9984C14.1252 20.0061 14.2946 19.9701 14.447 19.894L18.447 17.894C18.6131 17.811 18.7528 17.6834 18.8504 17.5255C18.9481 17.3676 18.9999 17.1856 19 17V11.236C18.9999 11.0656 18.9563 10.898 18.8733 10.7492C18.7902 10.6004 18.6706 10.4753 18.5256 10.3858C18.3806 10.2962 18.2152 10.2452 18.045 10.2375C17.8748 10.2298 17.7054 10.2658 17.553 10.342L13.553 12.342C13.3869 12.4249 13.2472 12.5525 13.1496 12.7104C13.0519 12.8683 13.0001 13.0503 13 13.236V19ZM17.211 8.27595C17.3769 8.19282 17.5164 8.06516 17.6138 7.90728C17.7113 7.74939 17.7629 7.5675 17.7629 7.38195C17.7629 7.1964 17.7113 7.01451 17.6138 6.85663C17.5164 6.69874 17.3769 6.57109 17.211 6.48795L12.447 4.10595C12.3082 4.0366 12.1552 4.00049 12 4.00049C11.8448 4.00049 11.6918 4.0366 11.553 4.10595L6.789 6.48795C6.62312 6.57109 6.48364 6.69874 6.38617 6.85663C6.28869 7.01451 6.23707 7.1964 6.23707 7.38195C6.23707 7.5675 6.28869 7.74939 6.38617 7.90728C6.48364 8.06516 6.62312 8.19282 6.789 8.27595L11.553 10.658C11.6918 10.7273 11.8448 10.7634 12 10.7634C12.1552 10.7634 12.3082 10.7273 12.447 10.658L17.211 8.27595ZM6.447 10.342C6.29458 10.2658 6.12522 10.2298 5.95501 10.2375C5.78479 10.2452 5.61935 10.2962 5.47439 10.3858C5.32944 10.4753 5.20977 10.6004 5.12674 10.7492C5.04372 10.898 5.00009 11.0656 5 11.236V17C5.0001 17.1856 5.05188 17.3676 5.14955 17.5255C5.24722 17.6834 5.38692 17.811 5.553 17.894L9.553 19.894C9.70542 19.9701 9.87477 20.0061 10.045 19.9984C10.2152 19.9907 10.3806 19.9397 10.5256 19.8501C10.6706 19.7606 10.7902 19.6355 10.8733 19.4867C10.9563 19.3379 10.9999 19.1703 11 19V13.236C10.9999 13.0503 10.9481 12.8683 10.8504 12.7104C10.7528 12.5525 10.6131 12.4249 10.447 12.342L6.447 10.342Z" fill="#B0BABF"/>
@@ -50,28 +51,12 @@ function DoubleRowNavbar() {
 
         </Col>
 
-        <Col sm="1" lg="2">
+        <Col sm="1" >
          <Button>Sign in</Button>
         </Col>
 
     </Row>
-    <Row>
-        <Col>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05002 6.04987C8.36284 4.73705 10.1434 3.99951 12 3.99951C13.8566 3.99951 15.6372 4.73705 16.95 6.04987C18.2628 7.36269 19.0004 9.14326 19.0004 10.9999C19.0004 12.8565 18.2628 14.637 16.95 15.9499L12 20.8999L7.05002 15.9499C6.39993 15.2998 5.88425 14.5281 5.53242 13.6788C5.1806 12.8295 4.99951 11.9192 4.99951 10.9999C4.99951 10.0806 5.1806 9.17025 5.53242 8.32092C5.88425 7.47159 6.39993 6.69989 7.05002 6.04987ZM12 12.9999C12.5304 12.9999 13.0392 12.7892 13.4142 12.4141C13.7893 12.039 14 11.5303 14 10.9999C14 10.4694 13.7893 9.96073 13.4142 9.58566C13.0392 9.21058 12.5304 8.99987 12 8.99987C11.4696 8.99987 10.9609 9.21058 10.5858 9.58566C10.2107 9.96073 10 10.4694 10 10.9999C10 11.5303 10.2107 12.039 10.5858 12.4141C10.9609 12.7892 11.4696 12.9999 12 12.9999Z" fill="#B0BABF"/>
-            </svg>
-            <span>Egypt</span>
-        
-        </Col>
-        <Col sm="0" lg="4" >
-                <Nav.Link href="#Home" className='Nav-link-center'>Home</Nav.Link>
-                <Nav.Link href="#About" className='Nav-link-center'>About Us</Nav.Link>
-                <Nav.Link href="#Contact"className='Nav-link-center'>Contact</Nav.Link>
-                <Nav.Link href="#Reviews" className='Nav-link-center'>Reviews</Nav.Link>
-
-        </Col>
-    </Row>
-
+ 
     </Container>
 
    </Navbar>

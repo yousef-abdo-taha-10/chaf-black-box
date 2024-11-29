@@ -14,7 +14,7 @@ const Sliddder = () => {
     <div>
       <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item  className='carousal-img'>
-      <img Src='img\Rectangle 26.png' alt='' />
+      <img Src='' alt='' />
       
       </Carousel.Item >
       <Carousel.Item  className='carousal-img'>
