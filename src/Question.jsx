@@ -4,17 +4,17 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 const Question = () => {
   return (
-    <Container className='quest'>
+    <Container fluid  className='quest'>
        
         <Row  className='quest-img'>
             <Col className='quest-img11' >
-               <img src=' image\Avatar.png' alt=' ' />
-               <img src='image\Avatar-1.png ' alt=' ' />
+               <img src=' images\Avatar.png' alt=' ' />
+               <img src='images\Avatar-1.png ' alt=' ' />
             </Col>
            
         
             <Col  className='quest-img1'>
-              <img src=' image\Avatar-2.png ' alt='' />
+              <img src=' images\Avatar-2.png ' alt='' />
             </Col>
 
         </Row>
@@ -22,11 +22,11 @@ const Question = () => {
        
 
         <div className='quest-text'> 
-           <h3>Still have questions?</h3>
-          <p>Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
-          <button>Get in touch</button>
+          
+          <p>Here are some of the most important customer questions <br/>and their answers.</p>
+         
         </div>
-         {/* <button><a href='Questform.jsx'>Get in touch</a></button> */}
+       
     </Container>
   )
 }
