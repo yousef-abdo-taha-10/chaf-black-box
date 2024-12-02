@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Register.css';
 
+
 const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [phone, setPhone] = useState('');
+    const [age, setAge] = useState('');
     const [error, setError] = useState({});
     const [successMessage, setSuccessMessage] = useState('');
 
@@ -33,6 +35,9 @@ const Register = () => {
         else if (phone.length < 11) {
             tempErrors.phone = "phone must be at least 11 numbers";
         }
+        if (!age) {
+            tempErrors.age = 'age is required ';
+        }
 
         setError(tempErrors);
         return Object.keys(tempErrors).length === 0;
@@ -47,7 +52,8 @@ const Register = () => {
             name,
             email,
             password,
-            phone
+            phone,
+            age
            
          });
          const token = response.data.token;
@@ -61,11 +67,12 @@ const Register = () => {
             setError({server: 'Failed to create account. Please try again later.'})
 
         }
-            console.log(name, email, password,phone);
+            console.log(name, email, password,phone,age);
             setName('');
             setEmail('');
             setPassword('');
             setPhone('');
+            setAge('');
         }
 
     }
@@ -98,6 +105,10 @@ const Register = () => {
                     <br />
                     <input type='tel' placeholder=' phone' value={phone} onChange={(e) => setPhone(e.target.value)} className="phones" />
                     {error.phone && <p style={{ color: 'red', backgroundColor:'pink',width:'300px',height:'30px' ,marginLeft:'25%'}}>{error.phone}</p>}
+                    <br />
+
+                    <input type='number' placeholder=' Your Age' value={age} onChange={(e) => setAge(e.target.value)} className="ages" />
+                    {error.age && <p style={{ color: 'red', backgroundColor:'pink',width:'300px',height:'30px' ,marginLeft:'25%'}}>{error.age}</p>}
                     <br />
                     <input type='checkbox' className='register-box' id='register-boxx' />
                     <label className='register-remember1' for="register-boxx">I agree with <span className='register-remember'>Terms&Condition</span> of Chef</label>

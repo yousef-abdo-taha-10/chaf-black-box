@@ -13,7 +13,7 @@ const About = () => {
 
                     <Row className='about-row'>
                         <Col className='about-left' lg={6} md={12} sm={12}>
-                            <h1>About Us</h1>
+                            <h1>About <span>Us</span></h1>
                             <p>This is a type of restaurant which
                                 typically serves food and drinks, in
                                 addition to light refreshments such as

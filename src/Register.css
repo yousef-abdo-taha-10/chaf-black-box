@@ -23,7 +23,7 @@ form{
 
 
 }
-.usernames ,.emails,.passwords, .phones{
+.usernames ,.emails,.passwords, .phones,.ages{
     margin-bottom: 17px;
     width: 499px;
     background-color: rgb(255, 255, 255);
@@ -105,26 +105,4 @@ button{
     font-size: 14px;
     font-weight: bold;
     color: rgb(151, 149, 149);
-<<<<<<< HEAD
 }
-=======
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 88f7e4cde36f2c1b739c7679fd517854335aae31

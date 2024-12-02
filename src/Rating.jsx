@@ -8,7 +8,7 @@ const Rating = () => {
     return (
         <div>
             <section className='rating'>
-                <Container className='contr'>
+                <Container fluid className='contr'>
                   <h2 className='hhh'>Our Customers Love Us!</h2>
 
                     <Marquee>

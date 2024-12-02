@@ -14,6 +14,9 @@
     font-weight: bold;
     margin-top: 40px;
 }
+.about-row .about-left h1 span{
+    color:#FBA919;
+}
 
 .about-row .about-left p{
     line-height: 35px;
